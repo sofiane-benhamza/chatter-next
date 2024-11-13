@@ -1,0 +1,77 @@
+@import "slides.scss";
+
+:root {
+  --dark-blue: #242346;
+  --darker-blue: #5764EC;
+  --sea-blue: #7774FC;
+}
+
+.header-buttons {
+  border: 2px solid grey;
+  border-radius: 20px 20px;
+  transition: all .3s;
+  background-color: var(--sea-blue);
+
+  &:hover {
+    background-color: var(--darker-blue);
+  }
+}
+
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg--dark {
+  background-color: var(--dark-blue);
+}
+
+* {
+  font-family: "Tilt Warp", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+
+.hover-underline-black,
+.hover-underline-light {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  &:hover::after {
+    width: 100%;
+    left: 50%;
+  }
+}
+
+.hover-underline-black::after {
+  background-color: black;
+}
+
+.hover-underline-light::after {
+  background-color: #FFF;
+}
+
+.down-to-up {
+  transition: all .3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 8px var(--blue-beach);
+  }
+}

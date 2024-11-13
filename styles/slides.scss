@@ -1,0 +1,21 @@
+#min-navbar>p {
+    cursor: pointer;
+}
+
+#slide-1 {
+    min-height: calc(100dvh - 200px);
+}
+
+#slide-2,
+#slide-3,
+#slide-4,
+#slide-5,
+#slide-6 {
+    min-height: calc(100vh - 100px);
+}
+
+#slide-2,
+#slide-4,
+#slide-6 {
+    background-color: #EEE;
+}
